@@ -1,0 +1,18 @@
+<div class="mb-3 bg-light p-3">
+  <p>Parent Component</p>
+  <input class="form-control mb-2" [(ngModel)]="newName" placeholder="Name" />
+  <input
+    class="form-control mb-2"
+    type="number"
+    [(ngModel)]="newAge"
+    placeholder="Age"
+  />
+  <input class="form-control mb-2" [(ngModel)]="newEmail" placeholder="Email" />
+
+  <button class="btn btn-primary" (click)="add()">Add User</button>
+
+  <button class="btn btn-danger ms-2" (click)="clearAll()">Clear All</button>
+</div>
+
+<app-child></app-child>
+

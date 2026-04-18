@@ -1,0 +1,10 @@
+.child-box {
+  margin: 7px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #ccccbd;
+}
+
+#childInput {
+  width: 100%;
+}

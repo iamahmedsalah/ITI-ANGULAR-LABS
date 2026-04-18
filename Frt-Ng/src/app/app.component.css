@@ -1,0 +1,16 @@
+:root{
+	--avatar-size: 160px;
+}
+.profile-avatar{
+	width: var(--avatar-size);
+	height: var(--avatar-size);
+	object-fit: cover;
+	border: 6px solid #fff;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 576px){
+	:root{ --avatar-size: 120px; }
+	.card{ padding: 1rem; }
+}
+

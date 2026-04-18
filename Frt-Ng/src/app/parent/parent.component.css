@@ -1,0 +1,11 @@
+.parent-box {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  background: #be8c02;
+  border-radius: 8px;
+}
+.received-value {
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 4px;
+}

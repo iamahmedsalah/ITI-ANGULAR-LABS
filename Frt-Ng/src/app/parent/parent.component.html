@@ -1,0 +1,9 @@
+<div class="parent-box">
+  <h5>Parent Component</h5>
+  <app-child (valueChange)="onChildValue($event)"></app-child>
+
+  <div class="mt-3">
+    <strong>Value from child:</strong>
+    <div class="received-value">{{ childValue }}</div>
+  </div>
+</div>
