@@ -39,15 +39,10 @@ What each folder teaches
 - Student-Management — Real-example app
   - Focus: Angular Material integration, components, pipes, services, a students list/detail flow.
   - Notable folders: `src/app/components`, `src/app/material`, `src/app/models`, `src/app/services`, `src/app/pipes`.
-  - Live demo & screenshots: see [Student-Management/README.md](Student-Management/README.md) (add `https://student-management-iti.vercel.app/home` and place screenshots at `Student-Management/src/assets/screenshoot`)
+  - Screenshots: see [Student-Management/README.md](Student-Management/README.md)
+-  Live Demo: https://student-management-iti.vercel.app/home
 
-Tips & next steps
-
-- Use `npx ng serve --open` if you don't have the CLI installed globally.
-- Inspect routing in `src/app/app-routing.module.ts` and module wiring in `src/app/app.module.ts` for each project.
-- Want screenshots, live demos, or CI scripts? I can add them per project on request.
-
-Per-project READMEs have been added with feature lists and key file links. Pick a project and I can expand its README with examples, screenshots, and guided exercises.
+Per-project READMEs have been added with
 
 ---
 
