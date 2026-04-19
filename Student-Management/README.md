@@ -1,4 +1,4 @@
-# Student-Management — Material + CRUD-style UI
+# Student-Management — Bootstrap + CRUD-style UI
 
 Short: A small, practical app that ties Angular concepts together: components, services, pipes, and Angular Material.
 
