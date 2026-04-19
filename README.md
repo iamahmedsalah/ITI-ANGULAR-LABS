@@ -6,7 +6,7 @@ Quick links
 
 - [Frt-Ng](Frt-Ng) — Beginner demo
 - [Sec-Ng](Sec-Ng) — Services & DI examples
-- [Student-Management](Student-Management) — Material + CRUD-style UI
+- [Student-Management](Student-Management) — Bootstrap + CRUD-style UI
 
 Prerequisites
 
@@ -37,7 +37,7 @@ What each folder teaches
   - Notable folders: `src/app/services`, plus `child`/`parent` examples to consume services.
 
 - Student-Management — Real-example app
-  - Focus: Angular Material integration, components, pipes, services, a students list/detail flow.
+  - Focus: Angular bootstrap integration, components, pipes, services, a students list/detail flow.
   - Notable folders: `src/app/components`, `src/app/material`, `src/app/models`, `src/app/services`, `src/app/pipes`.
   - Screenshots: see [Student-Management/README.md](Student-Management/README.md)
 -  Live Demo: https://student-management-iti.vercel.app/home
