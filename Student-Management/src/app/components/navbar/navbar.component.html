@@ -1,0 +1,41 @@
+<!-- navbar.component.html -->
+<nav class="navbar navbar-expand-lg shadow-sm" style="background-color: var(--navy);">
+  <div class="container">
+
+    <a class="navbar-brand text-white fw-bold d-flex align-items-center gap-2"
+       routerLink="/home">
+      <i class="bi bi-mortarboard-fill" style="color: var(--sky);"></i>
+      Student<span style="color: var(--sky);">Management</span>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button"
+            (click)="isMenuOpen = !isMenuOpen"
+            style="color: white;">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+
+    <div class="navbar-collapse" [class.show]="isMenuOpen">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item">
+          <a class="nav-link nav-item-link" routerLink="/home"
+             routerLinkActive="nav-item-active">
+            <i class="bi bi-house-fill me-1"></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-item-link" routerLink="/students"
+             routerLinkActive="nav-item-active">
+            <i class="bi bi-people-fill me-1"></i>Students
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-item-link" routerLink="/add-student"
+             routerLinkActive="nav-item-active">
+            <i class="bi bi-person-plus-fill me-1"></i>Add Student
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

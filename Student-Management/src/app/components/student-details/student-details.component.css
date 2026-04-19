@@ -1,0 +1,140 @@
+/* student-details.component.css */
+.profile-card {
+  background: linear-gradient(135deg, var(--navy), #2d3f7a) !important;
+  border-radius: 18px !important;
+  border: none !important;
+}
+
+.header-actions{
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.big-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-name {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.profile-sub {
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 14px;
+}
+
+.info-card .card-header-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 0 0 10px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid var(--border);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid #f8fafc;
+  font-size: 0.88rem;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row .label {
+  color: var(--text-muted);
+}
+
+.info-row .value {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.info-card {
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.info-card mat-card-header {
+  padding: 12px 16px;
+}
+
+.info-card mat-card-title {
+  font-weight: 700;
+}
+
+/* Status badges */
+.badge-active {
+  background: rgba(46, 125, 50, 0.08);
+  color: #2e7d32;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-inactive {
+  background: rgba(198, 40, 40, 0.06);
+  color: #c62828;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* GPA badge classes that may be returned by getGpaBadge() */
+.gpa-high {
+  background: linear-gradient(90deg, #e8f5e9, #c8e6c9);
+  color: #2e7d32;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.gpa-medium {
+  background: linear-gradient(90deg, #fff8e1, #fff3e0);
+  color: #f57c00;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.gpa-low {
+  background: linear-gradient(90deg, #ffebee, #ffccd5);
+  color: #c62828;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 600px) {
+  .cards-grid { grid-template-columns: 1fr !important; }
+  .big-avatar { width:64px; height:64px; font-size:1.4rem; }
+}

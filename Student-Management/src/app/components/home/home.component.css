@@ -1,0 +1,78 @@
+/* home.component.css */
+.hero-wrap {
+  background: linear-gradient(135deg, var(--navy) 0%, #2d3f7a 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  color: white;
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: white;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.hero-btn-main {
+  background: white;
+  color: var(--navy);
+  border: none;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+.hero-btn-main:hover { transform: translateY(-2px); }
+
+.hero-btn-outline {
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.1);
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.hero-btn-outline:hover { background: rgba(255,255,255,0.2); color: white; }
+
+.hero-illustration {
+  width: 160px;
+  height: 160px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: var(--sky);
+}
+
+.feature-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(67,97,238,0.12) !important;
+}
+
+.feature-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}

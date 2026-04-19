@@ -1,0 +1,147 @@
+<!-- add-student.component.html -->
+<div class="page-container">
+  <div class="card border-0 shadow-sm form-card">
+    <div class="card-header border-0">
+      <h4 class="mb-0">
+        <i class="bi bi-person-plus-fill me-2" style="color: var(--sky);"></i>Add New Student
+      </h4>
+      <p>Fill in all required fields to register a new student.</p>
+    </div>
+
+    <div class="card-body p-4">
+      <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" novalidate>
+
+        <!-- Personal Info -->
+        <div class="section-title">
+          <i class="bi bi-person-fill me-2 text-primary"></i>Personal Information
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">First Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" [class.is-invalid]="isInvalid('firstName')"
+              formControlName="firstName" placeholder="e.g. Ali" />
+            <div class="invalid-feedback">{{ getError('firstName') }}</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Last Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" [class.is-invalid]="isInvalid('lastName')"
+              formControlName="lastName" placeholder="e.g. Hassan" />
+            <div class="invalid-feedback">{{ getError('lastName') }}</div>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Age <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" [class.is-invalid]="isInvalid('age')" formControlName="age"
+              placeholder="16–60" />
+            <div class="invalid-feedback">{{ getError('age') }}</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Gender <span class="text-danger">*</span></label>
+            <select class="form-select" [class.is-invalid]="isInvalid('gender')" formControlName="gender">
+              <option value="">Select gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <div class="invalid-feedback">{{ getError('gender') }}</div>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section-title">
+          <i class="bi bi-telephone-fill me-2 text-success"></i>Contact Details
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" [class.is-invalid]="isInvalid('email')" formControlName="email"
+              placeholder="example@email.com" />
+            <div class="invalid-feedback">{{ getError('email') }}</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Phone <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" [class.is-invalid]="isInvalid('phone')" formControlName="phone"
+              placeholder="01000000000" />
+            <div class="invalid-feedback">{{ getError('phone') }}</div>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-4">
+            <label class="form-label fw-semibold">Address</label>
+            <input type="text" class="form-control" formControlName="address" />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-semibold">City</label>
+            <input type="text" class="form-control" formControlName="city" />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-semibold">Country</label>
+            <input type="text" class="form-control" formControlName="country" />
+          </div>
+        </div>
+
+        <!-- Academic Info -->
+        <div class="section-title">
+          <i class="bi bi-mortarboard-fill me-2 text-warning"></i>Academic Information
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Department <span class="text-danger">*</span></label>
+            <select class="form-select" [class.is-invalid]="isInvalid('department')" formControlName="department">
+              <option value="">Select department</option>
+              <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+            </select>
+            <div class="invalid-feedback">{{ getError('department') }}</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Level <span class="text-danger">*</span></label>
+            <select class="form-select" [class.is-invalid]="isInvalid('level')" formControlName="level">
+              <option value="">Select level</option>
+              <option [value]="1">Level 1</option>
+              <option [value]="2">Level 2</option>
+              <option [value]="3">Level 3</option>
+              <option [value]="4">Level 4</option>
+            </select>
+            <div class="invalid-feedback">{{ getError('level') }}</div>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Enrollment Date <span class="text-danger">*</span></label>
+            <input type="date" class="form-control" [class.is-invalid]="isInvalid('enrollmentDate')"
+              formControlName="enrollmentDate" />
+            <div class="invalid-feedback">{{ getError('enrollmentDate') }}</div>
+          </div>
+        </div>
+
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" formControlName="isActive" id="isActive" />
+          <label class="form-check-label fw-semibold" for="isActive">
+            Active Student
+          </label>
+        </div>
+
+        <hr />
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-end gap-3">
+          <button type="button" class="btn btn-outline-danger px-4" (click)="onCancel()">
+            <i class="bi bi-x-circle me-2"></i>Cancel
+          </button>
+          <button type="submit" class="btn btn-primary px-4" [disabled]="studentForm.invalid && submitted">
+            <i class="bi bi-save-fill me-2"></i>Add Student
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

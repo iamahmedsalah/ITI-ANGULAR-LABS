@@ -1,0 +1,146 @@
+/* students.component.css */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.page-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-navy);
+  letter-spacing: -0.02em;
+}
+
+.page-header h2 mat-icon {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  color: var(--tertiary-sage);
+}
+
+.filters-card {
+  margin-bottom: 32px;
+  border-radius: var(--radius-default) !important;
+  background-color: white !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--shadow-sm) !important;
+  padding: 24px;
+}
+
+.filters-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-field {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Customizing Material Form Field for Verdana Health inputs - NO OUTLINE, rounded corners */
+::ng-deep .filter-field .mat-mdc-text-field-wrapper {
+  background-color: var(--surface-default) !important; /* White background */
+  border: 1px solid var(--border-color) !important; /* Default light gray border */
+  border-radius: var(--radius-default) !important; /* 8px radius */
+  height: 48px !important;
+  transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: none !important; /* Ensure no shadow */
+}
+
+::ng-deep .filter-field.mat-focused .mat-mdc-text-field-wrapper {
+  border-color: var(--primary-navy) !important; /* Dark Navy border */
+  border-width: 2px !important; /* Thicker border on focus */
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1) !important; /* 3px ring shadow */
+}
+
+/* Hide default underline indicator */
+::ng-deep .mat-mdc-form-field-underline {
+  display: none !important;
+}
+::ng-deep .mat-mdc-form-field-ripple {
+  display: none !important;
+}
+
+/* Input font and placeholder color */
+::ng-deep .filter-field .mat-mdc-input-element {
+  color: var(--primary-navy) !important; /* Black/Dark Navy font */
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+}
+
+::ng-deep .filter-field .mat-mdc-input-element::placeholder {
+  color: var(--secondary-slate) !important; /* Gray placeholder */
+  opacity: 0.8 !important;
+}
+
+/* Label color */
+::ng-deep .filter-field .mat-mdc-form-field-label {
+  color: var(--secondary-slate) !important; /* Gray label */
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+/* Dropdown specific styling within filters */
+::ng-deep .filter-field .mat-mdc-select-value {
+  color: var(--primary-navy) !important;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  padding-top: 4px; /* Adjust padding for alignment */
+}
+
+::ng-deep .filter-field .mat-mdc-select-trigger .mat-icon {
+  color: var(--secondary-slate);
+}
+
+.clear-btn {
+  height: 48px;
+  padding: 0 24px;
+  border-radius: var(--radius-default); /* 8px radius */
+  color: var(--secondary-slate);
+  border: 1.5px solid var(--border-color);
+  background-color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.clear-btn:hover {
+  background-color: #F1F5F9;
+  border-color: var(--secondary-slate);
+  color: var(--primary-navy);
+}
+
+.loading-container {
+  padding: 64px 32px;
+  text-align: center;
+  background: white;
+  border-radius: var(--radius-default);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-default);
+  margin-bottom: 32px;
+}
+
+.loading-container p {
+  margin-top: 24px;
+  color: var(--primary-navy);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+::ng-deep .mat-mdc-progress-bar {
+  border-radius: 9999px !important;
+  height: 8px !important;
+}

@@ -1,11 +1,35 @@
 .parent-box {
-  border: 1px solid #e0e0e0;
-  padding: 12px;
-  background: #be8c02;
-  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
 }
-.received-value {
-  margin-top: 6px;
-  padding: 8px;
+
+.parent-box h5 {
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.parent-box h5::before {
+  content: '';
+  width: 8px;
+  height: 24px;
+  background: #3182ce;
   border-radius: 4px;
+}
+
+.received-value {
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: #ebf8ff;
+  color: #2c5282;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid #bee3f8;
 }

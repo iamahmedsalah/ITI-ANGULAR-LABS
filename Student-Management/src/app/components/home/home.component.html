@@ -1,0 +1,66 @@
+<!-- home.component.html -->
+<div class="page-container">
+
+  <!-- Hero -->
+  <div class="hero-wrap mb-4">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <p class="hero-eyebrow mb-2">
+          <i class="bi bi-stars me-1" style="color: var(--amber);"></i>
+          Welcome to your dashboard
+        </p>
+        <h1 class="hero-title mb-3">
+          Manage Students<br>
+          <span style="color: var(--sky);">Effortlessly.</span>
+        </h1>
+        <p class="hero-sub mb-4">
+          Add, view, search and manage student records from one clean interface.
+          Built with Angular & Bootstrap.
+        </p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a routerLink="/students" class="btn btn-light btn-lg px-4 fw-semibold hero-btn-main">
+            <i class="bi bi-people-fill me-2"></i>View Students
+          </a>
+          <a routerLink="/add-student" class="btn btn-lg px-4 hero-btn-outline">
+            <i class="bi bi-person-plus-fill me-2"></i>Add Student
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+        <div class="hero-illustration">
+          <i class="bi bi-mortarboard-fill"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Row -->
+  <div class="row g-3 mb-4">
+    <div class="col-6 col-md-3">
+      <div class="stat-card">
+        <div class="stat-label">Total Students</div>
+        <div class="stat-value" style="color: var(--indigo);">124</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-card">
+        <div class="stat-label">Active</div>
+        <div class="stat-value" style="color: #059669;">98</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-card">
+        <div class="stat-label">Avg GPA</div>
+        <div class="stat-value" style="color: var(--pink);">3.4</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-card">
+        <div class="stat-label">Departments</div>
+        <div class="stat-value" style="color: #d97706;">5</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,40 @@
+/* add-student.component.css */
+.form-card {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.form-card .card-header {
+  background: linear-gradient(135deg, var(--navy), #2d3f7a);
+  border-radius: 14px 14px 0 0 !important;
+  padding: 22px 28px;
+}
+
+.form-card .card-header h4 {
+  color: white;
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.form-card .card-header p {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.85rem;
+  margin: 4px 0 0;
+}
+
+.form-control, .form-select {
+  border-color: var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  padding: 9px 12px;
+  color: var(--text-main);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-label {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}

@@ -1,0 +1,119 @@
+<!-- student-details.component.html -->
+<div class="page-container">
+
+    <!-- Actions Bar -->
+    <div class="header-actions d-flex gap-2 mb-3">
+     <button class="btn btn-outline-primary back-btn" (click)="goBack()">
+       Back to Students
+     </button>
+     <button *ngIf="student$ | async as student" class="btn btn-primary" (click)="onEdit(student.id)">
+       Edit Student
+     </button>
+    </div>
+
+  <!-- Student Details Section -->
+  <div *ngIf="student$ | async as student; else notFound">
+
+    <!-- Profile Header -->
+    <div class="card profile-card mb-4">
+      <div class="card-body p-4">
+        <div class="d-flex align-items-center gap-4">
+          <div class="big-avatar">
+            {{ student.firstName[0] }}{{ student.lastName[0] }}
+          </div>
+          <div>
+            <div class="profile-name">{{ student.firstName }} {{ student.lastName }}</div>
+            <div class="profile-sub">{{ student.department }} — Level {{ student.level }}</div>
+            <div class="d-flex gap-2 flex-wrap">
+              <span [class]="student.isActive ? 'badge-active' : 'badge-inactive'">
+                <i class="bi me-1" [class]="student.isActive ? 'bi-check-circle-fill' : 'bi-x-circle-fill'"></i>
+                {{ student.isActive ? 'Active' : 'Inactive' }}
+              </span>
+              <span class="rounded-lg" [class]="getGpaBadge(student.GPA)">
+                <i class="bi bi-star-fill me-1"></i>GPA: {{ student.GPA }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Cards Grid -->
+    <div class="cards-grid" style="display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+
+      <!-- Personal Info -->
+      <div class="info-card shadow-sm card">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="me-3"><i class="bi bi-person-circle fs-3"></i></div>
+            <div>
+              <div class="h6 mb-0">Personal Info</div>
+              <small class="text-muted">{{ student.firstName }} {{ student.lastName }}</small>
+            </div>
+          </div>
+          <div class="info-list">
+            <div class="info-row"><div class="label">Age</div><div class="value">{{ student.age }}</div></div>
+            <div class="info-row"><div class="label">Gender</div><div class="value">{{ student.gender }}</div></div>
+            <div class="info-row"><div class="label">Email</div><div class="value">{{ student.email }}</div></div>
+            <div class="info-row"><div class="label">Phone</div><div class="value">{{ student.phone }}</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="info-card shadow-sm card">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="me-3"><i class="bi bi-geo-alt-fill fs-3"></i></div>
+            <div>
+              <div class="h6 mb-0">Location</div>
+              <small class="text-muted">{{ student.city }}, {{ student.country }}</small>
+            </div>
+          </div>
+          <div class="info-list">
+            <div class="info-row"><div class="label">Address</div><div class="value">{{ student.address }}</div></div>
+            <div class="info-row"><div class="label">City</div><div class="value">{{ student.city }}</div></div>
+            <div class="info-row"><div class="label">Country</div><div class="value">{{ student.country }}</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic Info -->
+      <div class="info-card shadow-sm card">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="me-3"><i class="bi bi-mortarboard-fill fs-3"></i></div>
+            <div>
+              <div class="h6 mb-0">Academic Info</div>
+              <small class="text-muted">{{ student.department }} — Level {{ student.level }}</small>
+            </div>
+          </div>
+          <div class="info-list">
+            <div class="info-row"><div class="label">Department</div><div class="value">{{ student.department }}</div></div>
+            <div class="info-row"><div class="label">Level</div><div class="value">{{ student.level }}</div></div>
+            <div class="info-row"><div class="label">GPA</div>
+              <div class="value">
+                <span [ngStyle]="{ color: (student.GPA >= 3.5 ? '#2e7d32' : (student.GPA >= 2.5 ? '#f57c00' : '#c62828')), 'font-weight':'700' }">{{ student.GPA }}</span>
+              </div>
+            </div>
+            <div class="info-row"><div class="label">Enrolled</div><div class="value">{{ student.enrollmentDate }}</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <ng-template #notFound>
+    <div class="not-found-card card text-center p-4">
+      <div class="card-body">
+        <div class="mb-3 text-warning"><i class="bi bi-exclamation-triangle-fill fs-1"></i></div>
+        <h3>Student Not Found</h3>
+        <p>No student exists with this ID.</p>
+        <button class="btn btn-primary" (click)="goBack()">Go Back</button>
+      </div>
+    </div>
+  </ng-template>
+
+</div>
