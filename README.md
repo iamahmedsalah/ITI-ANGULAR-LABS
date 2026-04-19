@@ -1,42 +1,55 @@
-# Angular Labs (workspace)
+# 🌟 Angular Labs — Hands-on Exercises
 
-This workspace contains three small Angular lab projects used for learning and exercises.
+Welcome! This workspace contains three small Angular labs designed for step‑by‑step learning: a beginner demo, a services-focused lab, and a student-management app that ties concepts together.
 
-Prerequisites:
-- Install Node.js and npm
-- (Optional) Install the Angular CLI: `npm install -g @angular/cli`
+Quick links
 
-Projects:
+- [Frt-Ng](Frt-Ng) — Beginner demo
+- [Sec-Ng](Sec-Ng) — Services & DI examples
+- [Student-Management](Student-Management) — Material + CRUD-style UI
 
-- **Frt-Ng**: [Frt-Ng](Frt-Ng) — A beginner Angular lab demonstrating routing, basic components, and parent/child communication. Key folders: `src/app/about`, `src/app/home`, `src/app/parent`, `src/app/child`.
-  - Run:
-    - `cd Frt-Ng`
-    - `npm install`
-    - `npm start` (runs `ng serve`)
-  - Build / deploy:
-    - `npm run build`
-    - For GitHub Pages: `npm run predeploy` then `npm run deploy:gh` (project includes `angular-cli-ghpages`).
+Prerequisites
 
-- **Sec-Ng**: [Sec-Ng](Sec-Ng) — A second lab focusing on services and dependency injection plus component examples. Key folder: `src/app/services` and `src/app/child`, `src/app/parent`.
-  - Run:
-    - `cd Sec-Ng`
-    - `npm install`
-    - `npm start`
+- Install Node.js (LTS) and npm
+- Optionally install the Angular CLI globally: `npm install -g @angular/cli`
 
-- **Student-Management**: [Student-Management](Student-Management) — A more complete app demonstrating components, Angular Material integration, pipes, services, and a simple students management UI. Key folders: `src/app/components`, `src/app/material`, `src/app/models`, `src/app/services`, `src/app/pipes`.
-  - Run:
-    - `cd Student-Management`
-    - `npm install`
-    - `npm start`
+Global quick-start (per project)
 
-Notes and tips:
-- Each project is a standalone Angular app. Run `npm install` inside the project folder before `npm start`.
-- If you prefer the Angular CLI directly: from a project folder run `npx ng serve --open`.
-- To inspect routing or module wiring, see the project's `src/app/app-routing.module.ts` and `src/app/app.module.ts` files.
+From the workspace root, pick a project and run:
 
-If you'd like, I can:
-- Add example screenshots for each app
-- Add per-project README files with more detailed walkthroughs and important file links
-- Create npm workspace scripts to run multiple projects from the repo root
+```bash
+cd Frt-Ng
+npm install
+npm start
+```
 
-Tell me which of the above you'd like next.
+Repeat for `Sec-Ng` and `Student-Management`.
+
+What each folder teaches
+
+- Frt-Ng — Beginner playground
+  - Focus: routing, component communication (parent → child, child → parent), simple templates and styles.
+  - Notable folders: `src/app/about`, `src/app/home`, `src/app/parent`, `src/app/child`.
+  - Extras: includes a `predeploy` and `deploy:gh` script for publishing to GitHub Pages.
+
+- Sec-Ng — Services & patterns
+  - Focus: creating and testing services, dependency injection, sharing data between components.
+  - Notable folders: `src/app/services`, plus `child`/`parent` examples to consume services.
+
+- Student-Management — Real-example app
+  - Focus: Angular Material integration, components, pipes, services, a students list/detail flow.
+  - Notable folders: `src/app/components`, `src/app/material`, `src/app/models`, `src/app/services`, `src/app/pipes`.
+  - Live demo & screenshots: see [Student-Management/README.md](Student-Management/README.md) (add `https://student-management-iti.vercel.app/home` and place screenshots at `Student-Management/src/assets/screenshoot`)
+
+Tips & next steps
+
+- Use `npx ng serve --open` if you don't have the CLI installed globally.
+- Inspect routing in `src/app/app-routing.module.ts` and module wiring in `src/app/app.module.ts` for each project.
+- Want screenshots, live demos, or CI scripts? I can add them per project on request.
+
+Per-project READMEs have been added with feature lists and key file links. Pick a project and I can expand its README with examples, screenshots, and guided exercises.
+
+---
+
+If you want a single command from the workspace root to boot all apps concurrently, I can add an npm workspace and a small script — tell me whether you'd like that.
+

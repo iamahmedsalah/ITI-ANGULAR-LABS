@@ -1,3 +1,30 @@
+# Sec-Ng — Services & Patterns Lab
+
+Short: Exercises that focus on Angular services, dependency injection, and sharing state between components.
+
+Why open this
+
+- Shows how to create and register services
+- Demonstrates using a service to share data and logic across components
+
+Key folders and files
+
+- `src/app/services` — Service implementations and specs
+- `src/app/parent` / `src/app/child` — Consumer components for the services
+- `package.json` — standard `start`, `build`, `test` scripts
+
+Run locally
+
+```bash
+cd Sec-Ng
+npm install
+npm start
+```
+
+Notes
+
+- Use this project to practice writing unit tests for services and mocking dependencies.
+- Check `src/app/services/services.service.spec.ts` for test examples.
 # DataService (Sec-Ng)
 
 Tiny documentation for the DataService used in the Sec-Ng demo app.

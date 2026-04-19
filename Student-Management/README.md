@@ -1,3 +1,48 @@
+# Student-Management — Material + CRUD-style UI
+
+Short: A small, practical app that ties Angular concepts together: components, services, pipes, and Angular Material.
+
+Why open this
+
+- Demonstrates a realistic app structure and UI patterns
+- Useful examples of component composition, pipes, and service-driven data flows
+
+Key folders and files
+
+- `src/app/components` — Feature components (students list, table, details, add form)
+- `src/app/material` — Angular Material module imports and theming
+- `src/app/models/student.model.ts` — Student data shape
+- `src/app/services/students.service.ts` — Data access and business logic
+- `src/app/pipes/filter-students.pipe.ts` — Example of a custom pipe
+
+Run locally
+
+```bash
+cd Student-Management
+npm install
+npm start
+```
+
+Notes
+
+- Ideal for practicing: form validation, Material dialogs, and table filtering/sorting.
+- Add a mock backend (JSON server) if you want to test CRUD flows without changing the app.
+
+Live demo & screenshots
+
+- Live demo: [https://student-management-iti.vercel.app/home](https://student-management-iti.vercel.app/home)
+
+- Screenshots (place images under `src/assets/screenshoot` with these names):
+
+	- `home.png` — app dashboard
+	- `students.png` — students list view
+
+	Example Markdown to display them:
+
+	```md
+	![Dashboard](src/assets/screenshoot/home.png)
+	![Students list](src/assets/screenshoot/students.png)
+	```
 
 # Student Management (Simple)
 

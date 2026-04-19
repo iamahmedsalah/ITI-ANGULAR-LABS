@@ -1,3 +1,39 @@
+# Frt-Ng — Beginner Angular Playground
+
+Short: A friendly starter project that demonstrates routing, basic components, and parent/child communication.
+
+Why open this first
+
+- Minimal code footprint — easy to read and follow
+- Clear examples of `@Input()` / `@Output()` and simple routing
+
+Key folders and files
+
+- `src/app/about` — About page component
+- `src/app/home` — Home page component
+- `src/app/parent` — Parent component showcasing data flow
+- `src/app/child` — Child component used by the parent
+- `package.json` — contains `start`, `build`, `predeploy`, `deploy:gh` scripts
+
+Run locally
+
+```bash
+cd Frt-Ng
+npm install
+npm start
+```
+
+Deploy (GitHub Pages)
+
+```bash
+npm run predeploy
+npm run deploy:gh
+```
+
+Notes
+
+- Good for following along while learning two-way communication and basic routing.
+- Open `src/app/parent/parent.component.ts` and `src/app/child/child.component.ts` to trace inputs/outputs.
 # FirstNg (Angular demo)
 
 A small Angular 16 demo app showcasing a simple profile UI and parent-child communication between components. Built with Bootstrap and Font Awesome for quick styling and icons.
